@@ -1,0 +1,1 @@
+import{p as t,b as n}from"./p-7a555b06.js";(()=>{const n=import.meta.url,o={};return""!==n&&(o.resourcesUrl=new URL(".",n).href),t(o)})().then((t=>n([["p-9352014a",[[1,"int-button"]]]],t)));
