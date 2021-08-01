@@ -6,32 +6,94 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface FontIcon {
+        "config": any;
+        "icon": string;
+    }
     interface IntButton {
+        "logoImage": string;
+    }
+    interface IntNavbar {
+        "logoImage": string;
+    }
+    interface IntSidebar {
+    }
+    interface IntSideitem {
     }
 }
 declare global {
+    interface HTMLFontIconElement extends Components.FontIcon, HTMLStencilElement {
+    }
+    var HTMLFontIconElement: {
+        prototype: HTMLFontIconElement;
+        new (): HTMLFontIconElement;
+    };
     interface HTMLIntButtonElement extends Components.IntButton, HTMLStencilElement {
     }
     var HTMLIntButtonElement: {
         prototype: HTMLIntButtonElement;
         new (): HTMLIntButtonElement;
     };
+    interface HTMLIntNavbarElement extends Components.IntNavbar, HTMLStencilElement {
+    }
+    var HTMLIntNavbarElement: {
+        prototype: HTMLIntNavbarElement;
+        new (): HTMLIntNavbarElement;
+    };
+    interface HTMLIntSidebarElement extends Components.IntSidebar, HTMLStencilElement {
+    }
+    var HTMLIntSidebarElement: {
+        prototype: HTMLIntSidebarElement;
+        new (): HTMLIntSidebarElement;
+    };
+    interface HTMLIntSideitemElement extends Components.IntSideitem, HTMLStencilElement {
+    }
+    var HTMLIntSideitemElement: {
+        prototype: HTMLIntSideitemElement;
+        new (): HTMLIntSideitemElement;
+    };
     interface HTMLElementTagNameMap {
+        "font-icon": HTMLFontIconElement;
         "int-button": HTMLIntButtonElement;
+        "int-navbar": HTMLIntNavbarElement;
+        "int-sidebar": HTMLIntSidebarElement;
+        "int-sideitem": HTMLIntSideitemElement;
     }
 }
 declare namespace LocalJSX {
+    interface FontIcon {
+        "config"?: any;
+        "icon"?: string;
+    }
     interface IntButton {
+        "logoImage"?: string;
+    }
+    interface IntNavbar {
+        "logoImage"?: string;
+    }
+    interface IntSidebar {
+    }
+    interface IntSideitem {
+        "onHoverItem"?: (event: CustomEvent<any>) => void;
+        "onNumberOfClicks"?: (event: CustomEvent<number>) => void;
     }
     interface IntrinsicElements {
+        "font-icon": FontIcon;
         "int-button": IntButton;
+        "int-navbar": IntNavbar;
+        "int-sidebar": IntSidebar;
+        "int-sideitem": IntSideitem;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "font-icon": LocalJSX.FontIcon & JSXBase.HTMLAttributes<HTMLFontIconElement>;
             "int-button": LocalJSX.IntButton & JSXBase.HTMLAttributes<HTMLIntButtonElement>;
+            "int-navbar": LocalJSX.IntNavbar & JSXBase.HTMLAttributes<HTMLIntNavbarElement>;
+            "int-sidebar": LocalJSX.IntSidebar & JSXBase.HTMLAttributes<HTMLIntSidebarElement>;
+            "int-sideitem": LocalJSX.IntSideitem & JSXBase.HTMLAttributes<HTMLIntSideitemElement>;
         }
     }
 }

@@ -1,4 +1,4 @@
-import { Component, Host, h } from '@stencil/core';
+import { Component, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'int-button',
@@ -7,12 +7,18 @@ import { Component, Host, h } from '@stencil/core';
 })
 export class IntButton {
 
+  @Prop() logoImage: string;
+
   render() {
-    return (
-      <Host>
-        <button><slot /></button>
-      </Host>
-    );
+    return [
+      <div class="top">
+      <div class="applogo">
+        <a href="#/home" class="logo">
+            <img src={this.logoImage} alt="Intelepeer" />
+        </a>
+      </div>
+    </div>
+    ]
   }
 
 }
