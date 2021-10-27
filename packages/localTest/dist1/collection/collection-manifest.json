@@ -1,0 +1,16 @@
+{
+  "entries": [
+    "./components/icons/fontawesome/fontawesome-icon.js",
+    "./components/int-button/int-button.js",
+    "./components/int-item/int-side-item.js",
+    "./components/int-navbar/int-navbar.js",
+    "./components/int-sidenav/int-sidenav.js"
+  ],
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "2.6.0",
+    "typescriptVersion": "4.2.3"
+  },
+  "collections": [],
+  "bundles": []
+}

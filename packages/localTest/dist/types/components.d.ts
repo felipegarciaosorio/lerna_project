@@ -13,12 +13,19 @@ export namespace Components {
     interface IntButton {
         "logoImage": string;
     }
+    interface IntCard {
+        "userName": string;
+    }
     interface IntNavbar {
         "logoImage": string;
     }
-    interface IntSideitem {
+    interface IntSearch {
+        "searchText": string;
     }
-    interface IntSidenav {
+    interface IntSidebar {
+    }
+    interface IntSideitem {
+        "name": string;
     }
 }
 declare global {
@@ -34,11 +41,29 @@ declare global {
         prototype: HTMLIntButtonElement;
         new (): HTMLIntButtonElement;
     };
+    interface HTMLIntCardElement extends Components.IntCard, HTMLStencilElement {
+    }
+    var HTMLIntCardElement: {
+        prototype: HTMLIntCardElement;
+        new (): HTMLIntCardElement;
+    };
     interface HTMLIntNavbarElement extends Components.IntNavbar, HTMLStencilElement {
     }
     var HTMLIntNavbarElement: {
         prototype: HTMLIntNavbarElement;
         new (): HTMLIntNavbarElement;
+    };
+    interface HTMLIntSearchElement extends Components.IntSearch, HTMLStencilElement {
+    }
+    var HTMLIntSearchElement: {
+        prototype: HTMLIntSearchElement;
+        new (): HTMLIntSearchElement;
+    };
+    interface HTMLIntSidebarElement extends Components.IntSidebar, HTMLStencilElement {
+    }
+    var HTMLIntSidebarElement: {
+        prototype: HTMLIntSidebarElement;
+        new (): HTMLIntSidebarElement;
     };
     interface HTMLIntSideitemElement extends Components.IntSideitem, HTMLStencilElement {
     }
@@ -46,18 +71,14 @@ declare global {
         prototype: HTMLIntSideitemElement;
         new (): HTMLIntSideitemElement;
     };
-    interface HTMLIntSidenavElement extends Components.IntSidenav, HTMLStencilElement {
-    }
-    var HTMLIntSidenavElement: {
-        prototype: HTMLIntSidenavElement;
-        new (): HTMLIntSidenavElement;
-    };
     interface HTMLElementTagNameMap {
         "font-icon": HTMLFontIconElement;
         "int-button": HTMLIntButtonElement;
+        "int-card": HTMLIntCardElement;
         "int-navbar": HTMLIntNavbarElement;
+        "int-search": HTMLIntSearchElement;
+        "int-sidebar": HTMLIntSidebarElement;
         "int-sideitem": HTMLIntSideitemElement;
-        "int-sidenav": HTMLIntSidenavElement;
     }
 }
 declare namespace LocalJSX {
@@ -68,19 +89,33 @@ declare namespace LocalJSX {
     interface IntButton {
         "logoImage"?: string;
     }
+    interface IntCard {
+        "userName"?: string;
+    }
     interface IntNavbar {
         "logoImage"?: string;
     }
-    interface IntSideitem {
+    interface IntSearch {
+        "onSearchWoldNameSelected"?: (event: CustomEvent<string>) => void;
+        "searchText"?: string;
     }
-    interface IntSidenav {
+    interface IntSidebar {
+    }
+    interface IntSideitem {
+        "name"?: string;
+        "onHoverItem"?: (event: CustomEvent<any>) => void;
+        "onNumberOfClicks"?: (event: CustomEvent<number>) => void;
+        "onSelectData"?: (event: CustomEvent<String>) => void;
+        "onTodoCompleted"?: (event: CustomEvent<any>) => void;
     }
     interface IntrinsicElements {
         "font-icon": FontIcon;
         "int-button": IntButton;
+        "int-card": IntCard;
         "int-navbar": IntNavbar;
+        "int-search": IntSearch;
+        "int-sidebar": IntSidebar;
         "int-sideitem": IntSideitem;
-        "int-sidenav": IntSidenav;
     }
 }
 export { LocalJSX as JSX };
@@ -89,9 +124,11 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "font-icon": LocalJSX.FontIcon & JSXBase.HTMLAttributes<HTMLFontIconElement>;
             "int-button": LocalJSX.IntButton & JSXBase.HTMLAttributes<HTMLIntButtonElement>;
+            "int-card": LocalJSX.IntCard & JSXBase.HTMLAttributes<HTMLIntCardElement>;
             "int-navbar": LocalJSX.IntNavbar & JSXBase.HTMLAttributes<HTMLIntNavbarElement>;
+            "int-search": LocalJSX.IntSearch & JSXBase.HTMLAttributes<HTMLIntSearchElement>;
+            "int-sidebar": LocalJSX.IntSidebar & JSXBase.HTMLAttributes<HTMLIntSidebarElement>;
             "int-sideitem": LocalJSX.IntSideitem & JSXBase.HTMLAttributes<HTMLIntSideitemElement>;
-            "int-sidenav": LocalJSX.IntSidenav & JSXBase.HTMLAttributes<HTMLIntSidenavElement>;
         }
     }
 }

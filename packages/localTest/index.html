@@ -13,12 +13,12 @@
 </head>
 
 <body>
-    <int-button logo-image="assets/images/intelepeer.png"></int-button>
-    <int-sidenav>
-        <int-sideitem>
+    <int-navbar logo-image="assets/images/intelepeer.png"></int-navbar>
+    <int-sidebar>
+        <int-sideitem value="#0000FF">
             <font-icon icon="fa fa-home"></font-icon>
         </int-sideitem>
-        <int-sideitem>
+        <int-sideitem value="#0000FF">
             <font-icon icon="fa fa-calendar-check"></font-icon>
         </int-sideitem>
         <int-sideitem>
@@ -27,7 +27,14 @@
         <int-sideitem>
             <font-icon icon="fa fa-info-circle"></font-icon>
         </int-sideitem>
-    </int-sidenav>
+    </int-sidebar>
+    <div style="margin-left: 4%; margin-top: 2%;">
+        
+        <!--<div class="int-card-wrapper">This is outside of Component</div>-->
+        
+        <int-card user-name="Felipe"></int-card>
+        
+    </div>
 </body>
 
 </html>

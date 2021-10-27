@@ -1,4 +1,4 @@
-import { r as registerInstance, h } from './index-a55178ef.js';
+import { r as registerInstance, h } from './index-68fa2037.js';
 
 const intButtonCss = ":host{display:block}.top{background:#20355b;font-size:13px;color:#fff;position:fixed;top:0;width:100%;z-index:2;padding:0 16px;align-items:center;white-space:nowrap;left:0}.logo img{height:40px}";
 

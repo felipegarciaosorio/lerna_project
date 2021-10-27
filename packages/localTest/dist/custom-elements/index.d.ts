@@ -14,22 +14,34 @@ export const IntButton: {
   new (): IntButton;
 };
 
+interface IntCard extends Components.IntCard, HTMLElement {}
+export const IntCard: {
+  prototype: IntCard;
+  new (): IntCard;
+};
+
 interface IntNavbar extends Components.IntNavbar, HTMLElement {}
 export const IntNavbar: {
   prototype: IntNavbar;
   new (): IntNavbar;
 };
 
+interface IntSearch extends Components.IntSearch, HTMLElement {}
+export const IntSearch: {
+  prototype: IntSearch;
+  new (): IntSearch;
+};
+
+interface IntSidebar extends Components.IntSidebar, HTMLElement {}
+export const IntSidebar: {
+  prototype: IntSidebar;
+  new (): IntSidebar;
+};
+
 interface IntSideitem extends Components.IntSideitem, HTMLElement {}
 export const IntSideitem: {
   prototype: IntSideitem;
   new (): IntSideitem;
-};
-
-interface IntSidenav extends Components.IntSidenav, HTMLElement {}
-export const IntSidenav: {
-  prototype: IntSidenav;
-  new (): IntSidenav;
 };
 
 /**

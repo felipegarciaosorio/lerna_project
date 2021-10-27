@@ -1,0 +1,1 @@
+import{p as o,b as i}from"./p-65d7312c.js";(()=>{const i=import.meta.url,n={};return""!==i&&(n.resourcesUrl=new URL(".",i).href),o(n)})().then((o=>i([["p-486e663e",[[4,"font-icon",{icon:[1],config:[8]}],[1,"int-navbar",{logoImage:[1,"logo-image"]}],[4,"int-sideitem"],[4,"int-sidenav"]]],["p-5958bb8d",[[1,"int-button",{logoImage:[1,"logo-image"]}]]]],o)));
